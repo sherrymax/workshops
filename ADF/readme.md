@@ -6,7 +6,7 @@
 5. Overview of app.modules.ts
 6. Overview of app.routes.ts
 7. Overview of app.config.json
-8. Exercise 1 : Create a new Component within workspace
+8. Exercise 1 : Create a new Component within ADF workspace
 9. Exercise 2 : Routing from one Component to another
 10. Exercise 3 : Login Component Customization
 11. Exercise 4 : Styles and Theming
