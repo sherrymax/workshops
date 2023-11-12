@@ -9,7 +9,7 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
 
 
 1. Install Node Version Manager - For BASH Shell
-* Please run the below commands one after another.
+* Please run the below commands, one after another.
     ```
     [ec2-user@ip-1-2-3-4 adp]$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
@@ -43,7 +43,6 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
     * https://dev.to/saanchitapaul/install-nvm-node-version-manager-inside-zsh-34ke
 
     * https://gdevops.gitlab.io/tuto_javascript/installation/nvm/nvm.html
-<br/>
 
 3. Install a specific version of NVM (e.g. : 18.17.0)
     ```
@@ -58,14 +57,14 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
 
 5. Check NPM version
     ```
-    [ec2-user@ip-1-2-3-4 adp]$ python3npm --version
+    [ec2-user@ip-1-2-3-4 adp]$ npm --version
     ```
 
 6. Verify if Python is available, by typing `python3` at command prompt. 
     ```
     [ec2-user@ip-1-2-3-4 adp]$ python3
     ```
-    If not install it by `sudo yum install python`
+    If not install it by `sudo yum install python3`
 
 7. Install Yoeman
     ```
@@ -80,7 +79,7 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
     [ec2-user@ip-1-2-3-4 adp]$ npm install -g @angular/cli
     ```
 
-10. Navigate to a Project Folder 
+10. Create and navigate to a Project Folder 
     ```
     [ec2-user@ip-1-2-3-4 adp]$ cd <project-folder-name>
     ```
