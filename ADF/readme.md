@@ -1,11 +1,11 @@
 ### ADF Exercises:
 1. [Setup ADF workspace](https://github.com/sherrymax/workshops/tree/main/ADF/setup-workspace)
-2. Walkthrough of ADF Documentation Site
+2. Walkthrough of [ADF Documentation Site](https://www.alfresco.com/abn/adf/docs/)
 3. Properties and Functions of ADF Components
 4. Overview of Angular Concepts
-5. Overview of app.modules.ts
-6. Overview of app.routes.ts
-7. Overview of app.config.json
+5. Overview of [Angular Root Module - app.modules.ts](https://v2.angular.io/docs/ts/latest/guide/appmodule.html)
+6. Overview of [Angular Router - app.routes.ts](https://angular.io/guide/router)
+7. Overview of [Project Configuration using app.config.json](https://angular.io/guide/workspace-config)
 8. Exercise 1 : Create a new Component within ADF workspace
 9. Exercise 2 : Routing from one Component to another
 10. Exercise 3 : Login Component Customization
