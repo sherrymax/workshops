@@ -1,5 +1,5 @@
 ### ADF Exercises:
-1. Setup ADF workspace
+1. [Setup ADF workspace](https://github.com/sherrymax/workshops/tree/main/ADF/setup-workspace)
 2. Walkthrough of ADF Documentation Site
 3. Properties and Functions of ADF Components
 4. Overview of Angular Concepts
