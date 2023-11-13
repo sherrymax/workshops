@@ -5,8 +5,21 @@
 
 The below commands are used to setup ADF Workspace in Amazon Linux.
 
-#### Prerequisites
+#### Remote Connect using VS Code
 
+```
+Host ualberta-workshop-env-1
+    HostName ec2-18-232-63-233.compute-1.amazonaws.com
+    IdentityFile <your-path>/smathews-aws.pem
+    User ec2-user
+
+Host ualberta-workshop-env-2
+    HostName ec2-54-85-125-38.compute-1.amazonaws.com
+    IdentityFile <your-path>/smathews-aws.pem
+    User ec2-user
+```
+
+#### Installation Steps
 
 1. Install Node Version Manager - For BASH Shell
 * Please run the below commands, one after another.
@@ -24,7 +37,7 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
 	[ec2-user@ip-1-2-3-4 adp]$ . ~/.nvm/nvm.sh
 
     ```
-    
+
 * Open `.bash_profile` in VI editor
     ```
     [ec2-user@ip-1-2-3-4 adp]$ vi ~/.bash_profile
@@ -33,7 +46,7 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
 * Add below snippet to `.bash_profile` file in VI editor
     ```
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm    
-    ``` 
+    ```
 
 * Verify the NVM installation. Once installed the response to below command will be `nvm`
     ```
@@ -60,7 +73,7 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
     [ec2-user@ip-1-2-3-4 adp]$ npm --version
     ```
 
-6. Verify if Python is available, by typing `python3` at command prompt. 
+6. Verify if Python is available, by typing `python3` at command prompt.
     ```
     [ec2-user@ip-1-2-3-4 adp]$ python3
     ```
@@ -79,7 +92,7 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
     [ec2-user@ip-1-2-3-4 adp]$ npm install -g @angular/cli
     ```
 
-10. Create and navigate to a Project Folder 
+10. Create and navigate to a Project Folder
     ```
     [ec2-user@ip-1-2-3-4 adp]$ cd <project-folder-name>
     ```
@@ -88,15 +101,32 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
     ```
     [ec2-user@ip-1-2-3-4 adp]$ yo alfresco-adf-app
     ```
-12. If needed, download source code of an example ADF application from [Alfresco ADF GitHub](https://github.com/Alfresco/alfresco-ng2-components/tree/develop/demo-shell)
-    ```
-    [ec2-user@ip-1-2-3-4 adp]$ sudo yum install git
 
-    [ec2-user@ip-1-2-3-4 adp]$ git clone https://github.com/Alfresco/alfresco-ng2-components.git
+12. If needed, download source code of an example ADF application from [Alfresco ADF GitHub](https://github.com/Alfresco/alfresco-ng2-components/tree/6.4.0)
+    ```
+    [ec2-user@ip-1-2-3-4 adp]$ nvm install 20.9.0
+
+    [ec2-user@ip-1-2-3-4 adp]$ nvm use 20.9.0
+
+    [ec2-user@ip-1-2-3-4 adp]$ cd workshop/<username>
+
+    [ec2-user@ip-1-2-3-4 adp]$ curl -X GET "http://ec2-44-210-156-223.compute-1.amazonaws.com/alfresco/api/-default-/public/alfresco/versions/1/nodes/6dd1eb7f-e29e-4fa3-b406-c5ae7b32cd7d/content?attachment=true" -H  "accept: application/octet-stream" -H  "authorization: Basic ZGVtbzpkZW1v" --output alfresco-ng2-components.zip
+
+    [ec2-user@ip-1-2-3-4 adp]$ unzip alfresco-ng2-components.zip    
 
     [ec2-user@ip-1-2-3-4 adp]$ cd alfresco-ng2-components
 
     [ec2-user@ip-1-2-3-4 adp]$ npm install
 
+
+    ```
+
+13. Update proxy - Add a .env file and update.
+    ```
+    PROXY_HOST_ADF="http://1.2.3.4" #Enter your IP
+    ```
+
+14. Start the ADF app.
+    ```
     [ec2-user@ip-1-2-3-4 adp]$ npm start
     ```
