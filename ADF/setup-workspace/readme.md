@@ -110,23 +110,25 @@ Host ualberta-workshop-env-2
 
     [ec2-user@ip-1-2-3-4 adp]$ cd workshop/<username>
 
-    [ec2-user@ip-1-2-3-4 adp]$ curl -X GET "http://ec2-44-210-156-223.compute-1.amazonaws.com/alfresco/api/-default-/public/alfresco/versions/1/nodes/6dd1eb7f-e29e-4fa3-b406-c5ae7b32cd7d/content?attachment=true" -H  "accept: application/octet-stream" -H  "authorization: Basic ZGVtbzpkZW1v" --output alfresco-ng2-components.zip
+    [ec2-user@ip-1-2-3-4 adp]$ curl -X GET "http://ec2-44-210-156-223.compute-1.amazonaws.com/alfresco/api/-default-/public/alfresco/versions/1/nodes/6dd1eb7f-e29e-4fa3-b406-c5ae7b32cd7d/content?attachment=true" -H  "accept: application/octet-stream" -H  "authorization: Basic ZGVtbzpkZW1v" --output alfresco-ng2-components-6.4.0.zip
 
-    [ec2-user@ip-1-2-3-4 adp]$ unzip alfresco-ng2-components.zip    
+    [ec2-user@ip-1-2-3-4 adp]$ unzip alfresco-ng2-components-6.4.0.zip    
 
-    [ec2-user@ip-1-2-3-4 adp]$ cd alfresco-ng2-components
+    [ec2-user@ip-1-2-3-4 adp]$ cd alfresco-ng2-components-6.4.0
 
+    ```
+
+13. Update proxy - Add a .env file and update with your Sandbox IP.
+    ```
+    [ec2-user@ip-1-2-3-4 adp]$ echo 'PROXY_HOST_ADF="http://<my-sandbox-IP>" >> .env
+    ```
+
+14. Install NPM
+    ```
     [ec2-user@ip-1-2-3-4 adp]$ npm install
-
-
     ```
 
-13. Update proxy - Add a .env file and update.
-    ```
-    PROXY_HOST_ADF="http://1.2.3.4" #Enter your IP
-    ```
-
-14. Start the ADF app.
+15. Start the ADF app.
     ```
     [ec2-user@ip-1-2-3-4 adp]$ npm start
     ```
