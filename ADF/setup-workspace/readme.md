@@ -118,9 +118,9 @@ Host ualberta-workshop-env-2
 
     ```
 
-13. Update proxy - Add a .env file and update with your Sandbox IP.
+13. Add a .env file and update with your Sandbox IP.
     ```
-    [ec2-user@ip-1-2-3-4 adp]$ echo 'PROXY_HOST_ADF="http://<my-sandbox-IP>" >> .env
+    [ec2-user@ip-1-2-3-4 adp]$ echo 'PROXY_HOST_ADF="http://<my-sandbox-IP>"' >> .env
     ```
 
 14. Install NPM
@@ -132,3 +132,47 @@ Host ualberta-workshop-env-2
     ```
     [ec2-user@ip-1-2-3-4 adp]$ npm start
     ```
+--------------------
+
+### Steps for setting up Alfresco Digital Workspace (ADW)
+
+--------------------
+
+
+1. Create a folder and Navigate into that folder
+```
+mkdir username-adw
+cd username-adw
+```
+
+2.  Download ADW 4.3.0 Source Code into the folder.
+```
+    [ec2-user@ip-1-2-3-4 adp]$ curl -X GET "http://ec2-44-210-156-223.compute-1.amazonaws.com/alfresco/api/-default-/public/alfresco/versions/1/nodes/d6ea5403-f6ff-4c24-a435-4ec03335019d/content?attachment=true" -H  "accept: application/octet-stream" -H  "authorization: Basic ZGVtbzpkZW1v" --output alfresco-digital-workspace-4.3.0-source-code.zip
+```
+
+3. Unzip
+```
+unzip alfresco-digital-workspace-4.3.0-source-code.zip -d alfresco-digital-workspace-4.3.0-source-code
+
+cd alfresco-digital-workspace-4.3.0-source-code
+
+```
+
+4. NPM Clean Install
+```
+npm ci
+
+npm install
+```
+
+5. Add a .env file and update with your Sandbox IP.
+```
+[ec2-user@ip-1-2-3-4 adp]$ echo 'BASE_URL="http://54.85.125.38"' >> .env
+[ec2-user@ip-1-2-3-4 adp]$ echo 'BASE_URL="http://18.232.63.233"' >> .env
+
+```
+
+6. NPM Start
+```
+npm start content-ee
+```
