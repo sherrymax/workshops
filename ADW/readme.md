@@ -12,6 +12,10 @@ cd username-adw
 2.  Download ADW 4.3.0 Source Code into the folder.
 ```
     [ec2-user@ip-1-2-3-4 adp]$ curl -X GET "http://ec2-44-210-156-223.compute-1.amazonaws.com/alfresco/api/-default-/public/alfresco/versions/1/nodes/d6ea5403-f6ff-4c24-a435-4ec03335019d/content?attachment=true" -H  "accept: application/octet-stream" -H  "authorization: Basic ZGVtbzpkZW1v" --output alfresco-digital-workspace-4.3.0-source-code.zip
+
+
+    [ec2-user@ip-1-2-3-4 adp]$ curl --user $NEXUS_USER:$NEXUS_PASS \
+https://nexus.alfresco.com/nexus/service/local/repositories/enterprise-releases/content/org/alfresco/alfresco-digital-workspace/4.3.0/alfresco-digital-workspace-4.3.0.zip
 ```
 
 3. Unzip
