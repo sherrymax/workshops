@@ -28,6 +28,7 @@ Host adf-shop-env-2
 
     [ec2-user@ip-1-2-3-4 adf-shop]$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
+    Optional step to Change Shell
     [ec2-user@ip-1-2-3-4 adf-shop]$ chsh -s /bin/bash
 
     [ec2-user@ip-1-2-3-4 adf-shop]$ cat /etc/shells
