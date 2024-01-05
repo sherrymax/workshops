@@ -92,7 +92,7 @@ Host adf-shop-env-2
     ```
     npm install -g yo
 
-    Use Yoeman v4.3.1 due to recent errors
+    *** Use Yoeman v4.3.1 due to errors with latest version of Yoeman ***
     npm install -g yo@4.3.1
     ```
 9. Install the latest version of the [generator-alfresco-adf-app](https://github.com/Alfresco/generator-alfresco-adf-app)
