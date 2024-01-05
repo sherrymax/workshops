@@ -24,7 +24,7 @@ Host adf-shop-env-2
 1. Install Node Version Manager - For BASH Shell
 * Please run the below commands, one after another.
     ```
-    [ec2-user@ip-1-2-3-4 ~]$ mkdir adf-shop && cd adf-shop
+    [ec2-user@ip-1-2-3-4 ~]$ mkdir adf-shop && cd $_
 
     [ec2-user@ip-1-2-3-4 adf-shop]$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
@@ -83,30 +83,35 @@ Host adf-shop-env-2
     If not install it by `sudo yum install python3`.
     Press `Ctrl+D` to quit and return the prompt.
 
-7. Install Yoeman
+7. Install `build-essentials` package.
+    ```
+    sudo yum install -y make gcc*
+    ```
+
+8. Install Yoeman
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ npm install -g yo
     ```
-8. Install the latest version of the [generator-alfresco-adf-app](https://github.com/Alfresco/generator-alfresco-adf-app)
+9. Install the latest version of the [generator-alfresco-adf-app](https://github.com/Alfresco/generator-alfresco-adf-app)
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ npm install -g generator-alfresco-adf-app@latest
     ```
-9. Install the Angular CLI
+10. Install the Angular CLI
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ npm install -g @angular/cli
     ```
 
-10. Create and navigate to a Project Folder
+11. Create and navigate to a Project Folder
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ cd <project-folder-name>
     ```
 
-11. Create your First ADF application
+12. Create your First ADF application
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ yo alfresco-adf-app
     ```
 
-12. If needed, download source code of an example ADF application from [Alfresco ADF GitHub](https://github.com/Alfresco/alfresco-ng2-components/tree/6.4.0)
+13. If needed, download source code of an example ADF application from [Alfresco ADF GitHub](https://github.com/Alfresco/alfresco-ng2-components/tree/6.4.0)
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ nvm install 20.9.0
 
@@ -122,17 +127,17 @@ Host adf-shop-env-2
 
     ```
 
-13. Add a .env file and update with your Sandbox IP.
+14. Add a .env file and update with your Sandbox IP.
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ echo 'PROXY_HOST_ADF="http://<my-sandbox-IP>"' >> .env
     ```
 
-14. Install NPM
+15. Install NPM
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ npm install
     ```
 
-15. Start the ADF app.
+16. Start the ADF app.
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ npm start
     ```
