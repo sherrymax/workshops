@@ -8,12 +8,12 @@ The below commands are used to setup ADF Workspace in Amazon Linux.
 #### Remote Connect using VS Code
 
 ```
-Host ualberta-workshop-env-1
+Host adf-workshop-env-1
     HostName ec2-18-232-63-233.compute-1.amazonaws.com
     IdentityFile <your-path>/smathews-aws.pem
     User ec2-user
 
-Host ualberta-workshop-env-2
+Host adf-workshop-env-2
     HostName ec2-54-85-125-38.compute-1.amazonaws.com
     IdentityFile <your-path>/smathews-aws.pem
     User ec2-user
