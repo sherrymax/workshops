@@ -55,7 +55,7 @@ Host adf-shop-env-2
     ```
 	[ec2-user@ip-1-2-3-4 adf-shop]$ command -v nvm
     ```
-2. Install Node Version Manager - For ZSH
+2. Install Node Version Manager - <b>ONLY For ZSH</b>
     * https://dev.to/saanchitapaul/install-nvm-node-version-manager-inside-zsh-34ke
 
     * https://gdevops.gitlab.io/tuto_javascript/installation/nvm/nvm.html
