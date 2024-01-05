@@ -80,7 +80,8 @@ Host adf-shop-env-2
     ```
     [ec2-user@ip-1-2-3-4 adf-shop]$ python3
     ```
-    If not install it by `sudo yum install python3`
+    If not install it by `sudo yum install python3`.
+    Press `Ctrl+D` to quit and return the prompt.
 
 7. Install Yoeman
     ```
