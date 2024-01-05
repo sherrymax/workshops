@@ -101,17 +101,22 @@ Host adf-shop-env-2
     npm install -g @angular/cli
     ```
 
-11. Create and navigate to a Project Folder
+11. Check Angular version
+    ```
+     ng version
+    ```
+
+12. Create and navigate to a Project Folder
     ```
     cd <project-folder-name>
     ```
 
-12. Create your First ADF application
+13. Create your First ADF application
     ```
     yo alfresco-adf-app
     ```
 
-13. If needed, download source code of an example ADF application from [Alfresco ADF GitHub](https://github.com/Alfresco/alfresco-ng2-components/tree/6.4.0)
+14. If needed, download source code of an example ADF application from [Alfresco ADF GitHub](https://github.com/Alfresco/alfresco-ng2-components/tree/6.4.0)
     ```
     nvm install 20.9.0
 
@@ -127,17 +132,17 @@ Host adf-shop-env-2
 
     ```
 
-14. Add a .env file and update with your Sandbox IP.
+15. Add a .env file and update with your Sandbox IP.
     ```
     echo 'PROXY_HOST_ADF="http://<my-sandbox-IP>"' >> .env
     ```
 
-15. Install NPM
+16. Install NPM
     ```
     npm install
     ```
 
-16. Start the ADF app.
+17. Start the ADF app.
     ```
     npm start
     ```
