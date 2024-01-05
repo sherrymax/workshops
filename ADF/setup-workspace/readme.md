@@ -37,7 +37,7 @@ Host adf-shop-env-2
 
     [ec2-user@ip-1-2-3-4 adf-shop]$ . ~/.bash_profile
 
-	  [ec2-user@ip-1-2-3-4 adf-shop]$ . ~/.nvm/nvm.sh
+    [ec2-user@ip-1-2-3-4 adf-shop]$ . ~/.nvm/nvm.sh
 
     ```
 
@@ -63,6 +63,7 @@ Host adf-shop-env-2
 3. Install a specific version of NVM (e.g. : 18.17.0)
     ```
     nvm install 18.17.0
+    nvm install 20.9.0
     ```
     >Note: The above command will install NodeJS and NPM.
 
@@ -81,7 +82,7 @@ Host adf-shop-env-2
     python3
     ```
     If not install it by `sudo yum install python3`.
-    Press `Ctrl+D` to quit and return the prompt.
+    > Press `Ctrl+D` to quit and return the prompt.
 
 7. Install `build-essentials` package.
     ```
