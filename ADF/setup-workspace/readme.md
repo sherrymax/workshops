@@ -21,7 +21,7 @@ Host adf-shop-env-2
 
 #### Installation Steps
 
-1. Install Node Version Manager - For BASH Shell
+1. Install Node Version Manager - <b>For BASH Shell</b>
 * Please run the below commands, one after another.
     ```
     [ec2-user@ip-1-2-3-4 ~]$ mkdir adf-shop && cd $_
