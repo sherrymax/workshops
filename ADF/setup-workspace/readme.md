@@ -153,3 +153,5 @@ Host adf-shop-env-2
     ```
     npm start
     ```
+
+References : https://medium.com/@dassandeep0001/how-to-install-git-in-ec2-instance-1bfeb1cc9dc9
