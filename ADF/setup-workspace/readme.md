@@ -5,17 +5,19 @@
 
 The below commands are used to setup ADF Workspace in Amazon Linux.
 
-#### Remote Connect using VS Code
+#### Remote Connect to the Repository using VS Code
+
+> For Unix users : Enter the remote repository values in the config file under /Users/<username>/.ssh
 
 ```
 Host adf-shop-env-1
     HostName ec2-18-232-63-233.compute-1.amazonaws.com
-    IdentityFile <your-path>/smathews-aws.pem
+    IdentityFile <your-path>/<pem-file-name>.pem
     User ec2-user
 
 Host adf-shop-env-2
     HostName ec2-54-85-125-38.compute-1.amazonaws.com
-    IdentityFile <your-path>/smathews-aws.pem
+    IdentityFile <your-path>/<pem-file-name>.pem
     User ec2-user
 ```
 
@@ -112,6 +114,7 @@ Host adf-shop-env-2
 
 12. Create and navigate to a Project Folder
     ```
+    mkdir <project-folder-name>
     cd <project-folder-name>
     ```
 
